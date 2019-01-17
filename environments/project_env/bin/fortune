@@ -1,0 +1,12 @@
+#!/home/mansi4599/outpassfinal/environments/project_env/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'fortune==1.0','console_scripts','fortune'
+__requires__ = 'fortune==1.0'
+import re
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(
+        load_entry_point('fortune==1.0', 'console_scripts', 'fortune')()
+    )
