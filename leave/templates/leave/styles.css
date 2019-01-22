@@ -1,0 +1,17 @@
+body{
+	background-image: url("back.jpg");
+	background-size:cover;
+    }
+.head{
+	font-family:lucida console;
+	font-size:40px;
+	color: white;
+    }
+.head1{
+	font-family:lucida console;
+	color:white;
+    }
+.para{
+	font-size:18px;
+    font-family:arial;
+    }
