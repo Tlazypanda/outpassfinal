@@ -4,6 +4,7 @@ beautifulsoup4==4.7.0
 certifi==2018.11.29
 chardet==3.0.4
 Django==2.0.10
+django-widget-tweaks==1.4.3
 fortune==1.0
 grizzled-python==1.1.0
 idna==2.8
@@ -13,3 +14,4 @@ requests==2.21.0
 soupsieve==1.6.1
 urllib3==1.24.1
 virtualenv==16.1.0
+
