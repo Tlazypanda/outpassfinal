@@ -41,7 +41,7 @@
 <body>
 
   <div class="mb-1">
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md bg-transparent text-dark shadow">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -49,28 +49,28 @@
       <a class="navbar-brand" href="">outpass</a>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link text-dark" href="">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-link text-dark" href="{% url 'about' %}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            <a class="nav-link text-dark" href="{% url 'contact' %}">Contact Us</a>
           </li>
           <li class="nav-item">
             {% if user.is_authenticated %}
-            <a href="{% url 'request_new' %}" class="nav-link"><span class="glyphicon glyphicon-plus">New Request</span></a>
+            <a href="{% url 'request_new' %}" class="nav-link text-dark"><span class="glyphicon glyphicon-plus">New Request</span></a>
             {% else %}
-            <a href="{% url 'login' %}" class="nav-link"><span class="glyphicon glyphicon-lock">Login</span></a>
+            <a href="{% url 'login' %}" class="nav-link text-dark"><span class="glyphicon glyphicon-lock">Login</span></a>
             {% endif %}
           </li>
           <li>
             {% if user.is_authenticated %}
-            <p class="nav-link">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+            <p class="nav-link text-dark">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
             {% else %}
-            <a href="{% url 'signup' %}" class="nav-link"><span class="glyphicon glyphicon-lock">Signup</span></a>
+            <a href="{% url 'signup' %}" class="nav-link text-dark"><span class="glyphicon glyphicon-lock">Signup</span></a>
             {% endif %}
           </li>
 
