@@ -1,6 +1,7 @@
 body{
 	background-image: url("back.jpg");
 	background-size:cover;
+	font-size: 1.4rem;
     }
 .head{
 	font-family:lucida console;
