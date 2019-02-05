@@ -13,9 +13,10 @@ body{
 	color:white;
     }
 .para{
-	font-size:18px;
+	font-size:25px;
     font-family:arial;
     }
+    
 
 
 /* ==========================================================================
@@ -47,3 +48,49 @@ body{
   margin-bottom: 10px;
  
 }
+
+
+.about-area .about-wrapper {
+    height: 100%;
+    width: 100%;
+    display: table;
+    margin-top: 1em;
+  }
+  .about-area p{
+    font-size: 0.75em;
+  }
+  
+  .about-area .about-wrapper > div {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  
+  .about-area img {
+    border-radius: 4px;
+  }
+  
+  .about-area .content {
+    margin-top: 15px;
+  }
+  
+  .about-area .content p {
+    margin-bottom: 30px;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+  
+  .section-header p {
+    text: center;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  
+  .section-title {
+    font-size: 30px;
+    color: #222222;
+    display: inline-block;
+    font-weight: 700;
+    position: relative;
+  }
