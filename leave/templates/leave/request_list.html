@@ -1,31 +1,56 @@
 {% extends 'leave/base.html' %}
 {% load static %}
 {% block content %}
-<div id="hero-area" class="hero-area-bg">   
-      <div class="row">
-        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-          <div class="contents">
-            <h2 class="head-title">OutpassFinal<br>Leave Portal</h2>
-            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria 
-              tipográfica e de impressos, e vem sendo utilizado desde o século 
-              XVI, quando um impressor desconhecido pegou uma bandeja de tipos e
-               </p>
-          </div>
-        </div>
-        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-          <div class="intro-img">
-            <img class="img-fluid" src="{% static 'img/intro-mobile.png' %}" alt="">
-          </div>            
-      </div> 
-    </div> 
+
+<div id="hero-area" class="hero-area-bg">
+  <div class="row">
+    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+      <div class="contents">
+        <h2 class="head-title">OutpassFinal<br>Leave Portal</h2>
+        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria
+          tipográfica e de impressos, e vem sendo utilizado desde o século
+          XVI, quando um impressor desconhecido pegou uma bandeja de tipos e
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+      <div class="intro-img" style="height:100vh;">
+        <img class="img-fluid" src="{% static 'img/intro-mobile.png' %}" alt="">
+      </div>
+    </div>
   </div>
+</div>
+<footer class="footer">
+  <div class="container">
+      <div class="row ">
+    <span class=" col-9 text-muted">Made With <i class="fa fa-heart" style="color: red"></i> By Girls in opencode</span>
+   
+    <!-- Facebook -->
+    <div class="col-2">
+    <a href="https://www.facebook.com/opencodeiiita/">
+      <i class="fab fa-facebook-f mr-2" style="color:grey"> </i>
+    </a>
+    <!-- Google +-->
+    <a href="mailto:geekhaven@iiita.ac.in">
+      <i class="fa fa-envelope mr-2" style="color:grey"> </i>
+    </a>
+    <a href="https://github.com/fossiiita" >
+      <i class="fab fa-github mr-2" style="color: grey"></i>
+    </a>
+  </div>
+
+  </div>
+
+  </div>
+
+</footer>
 {% for request in requests %}
 <div class="request">
-    <div class="date">
-        {{ request.created_date }}
-    </div>
-    <h2><a href="{% url 'request_detail' pk=request.pk %}">{{ request.subject }}</a></h2>
-    <p>{{ request.description|linebreaksbr }}</p>
+  <div class="date">
+    {{ request.created_date }}
+  </div>
+  <h2><a href="{% url 'request_detail' pk=request.pk %}">{{ request.subject }}</a></h2>
+  <p>{{ request.description|linebreaksbr }}</p>
 </div>
 {% endfor %}
 {% endblock %}
