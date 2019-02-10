@@ -26,13 +26,14 @@ def request_list(request):
 @login_required
 def request_new(request):
     if request.method == "POST":
+        # import pdb; pdb.set_trace()
         form = RequestForm(request.POST)
         if form.is_valid():
             requests = form.save(commit=False)
             requests.student = request.user
             requests.created_date = timezone.now()
-            send_mail(requests.subject, requests.description, settings.EMAIL_HOST_USER,
-            [requests.parent_email], fail_silently=False)
+            # send_mail(requests.subject, requests.description, settings.EMAIL_HOST_USER,
+            # [requests.parent_email], fail_silently=False)
             requests.save()
             return redirect('request_detail', pk=requests.pk)
     else:

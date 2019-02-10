@@ -24,7 +24,7 @@ class RequestForm(forms.ModelForm):
         time = self.cleaned_data.get('time')
         date = self.cleaned_data.get('date')
         if time:
-            if date == timezone.now().date() and time < timezone.now().time():
+            if date < timezone.now().date():
                 raise forms.ValidationError("Time should not be a time that has already passed.",
                                                 code="time_in_past")
         return time
