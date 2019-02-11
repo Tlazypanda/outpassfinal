@@ -19,9 +19,16 @@ def contact(request):
 
 
 def request_list(request):
+    # print(Request.objects.all)
+    # requests = Request.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
+    return render(request, 'leave/request_list.html', {})
+
+def all_requests(request):
     print(Request.objects.all)
+    # import pdb; pdb.set_trace()
     requests = Request.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
-    return render(request, 'leave/request_list.html', {'requests': requests})
+    return render(request, 'leave/list.html',{'requests':requests})
+
 
 @login_required
 def request_new(request):

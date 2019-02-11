@@ -1,0 +1,17 @@
+{% extends 'leave/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+{% for request in requests %}
+<div class="request">
+  <div class="date">
+    {{ request.created_date }}
+  </div>
+  <h2><a href="{% url 'request_detail' pk=request.pk %}">{{ request.subject }}</a></h2>
+  <p>{{ request.description|linebreaksbr }}</p>
+</div>
+{% endfor %}
+{% endblock %}
